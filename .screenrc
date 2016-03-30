@@ -1,0 +1,24 @@
+
+shell -$SHELL # Make sure screen loads .bash_profile
+vbell_msg "bell: window ~%" # Message for visual bell
+
+# vbellwait 1 # Seconds to pause the screen for visual bell
+vbell off # Turns visual bell off
+
+# enable mouse-wheel backscrolling
+termcapinfo xterm* ti@:te@
+
+startup_message off # Disable copyright
+
+#hardstatus alwayslastline "%{= kR} %-Lw%{=b KY} %n%f %t %{-}%+Lw %=%{= dd}"
+hardstatus alwayslastline '%{gk}[%{G}%H%{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}]%{=b C}[%m/%d/%y %C %A]%{W}'
+
+# disable C-a s, which freezes the screen; can be resolved with C-a q
+bind s
+
+####################################################
+# Screen notes can be found in this very repo, under:
+# https://github.com/kheremos/linux_profiles/blob/master/notes/screen_notes.md
+# See Also:
+# http://aperiodic.net/screen/quick_reference
+####################################################
